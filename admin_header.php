@@ -20,7 +20,7 @@
       <nav class="navbar">
          <a href="admin_page.php">Trang chủ</a>
          <a href="admin_products.php">Truyện</a>
-         <a href="admin_category.php">Thể loại</a>
+         <!-- <a href="admin_category.php">Thể loại</a> -->
          <a href="admin_orders.php">Đơn hàng</a>
          <a href="admin_users.php">Người dùng</a></a>
          <a href="admin_contacts.php">Tin nhắn</a>
