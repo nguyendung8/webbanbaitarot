@@ -57,23 +57,23 @@
    <div class="total_money">
     <h1 class="statis_title">Tổng doanh thu</h1>
     <div class="total_price">
-        <h4>Tổng doanh thu từ các truyện đã bán được: </h4>
+        <h4>Tổng doanh thu từ các bộ bài đã bán được: </h4>
         <div style="font-size: 17px;">
             <?php echo number_format($total_price->fetch_object()->TotalPrice, 0,',','.') . ' đồng'; ?>
         </div>
     </div>
    </div>
    <div class="best_seller">
-   <h1 class="statis_title">Thống kê truyện bán chạy</h1>
+   <h1 class="statis_title">Thống kê bộ bài bán chạy</h1>
    <?php if (count($best_seller) > 0): ?>
       <div class="table-responsive card mt-2">
           <table style="width: 69% !important; margin: auto;" class="table table-bordered statistical_table">
               <tr>
                   <th>ID</th>
-                  <th>Tên truyện</th>
-                  <th>Tác giả truyện</th>
-                  <th>Mô tả truyện</th>
-                  <th>Số lượng truyện đã bán</th>
+                  <th>Tên bộ bài</th>
+                  <th>Tác giả bộ bài</th>
+                  <th>Mô tả bộ bài</th>
+                  <th>Số lượng bộ bài đã bán</th>
               </tr>
 				<?php foreach ($best_seller as $item): ?>
 					<tr>
@@ -101,16 +101,16 @@
     <?php endif; ?>
    </div>
    <div class="out_of_stock">
-   <h1 class="statis_title">Thống kê truyện đã hết trong kho</h1>
+   <h1 class="statis_title">Thống kê bộ bài đã hết trong kho</h1>
     <?php if (count($out_of_stock) > 0): ?>
       <div class="table-responsive card mt-2">
           <table style="width: 69% !important; margin: auto;" class="table table-bordered statistical_table">
               <tr>
                   <th>ID</th>
-                  <th>Tên truyện</th>
-                  <th>Tác giả truyện</th>
-                  <th>Mô tả truyện</th>
-                  <th>Số lượng truyện</th>
+                  <th>Tên bộ bài</th>
+                  <th>Tác giả bộ bài</th>
+                  <th>Mô tả bộ bài</th>
+                  <th>Số lượng bộ bài</th>
               </tr>
 				<?php foreach ($out_of_stock as $item): ?>
 					<tr>

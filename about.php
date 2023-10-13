@@ -27,7 +27,7 @@
 <?php include 'header.php'; ?>
 
 <div class="heading">
-   <h3>Về Comic</h3>
+   <h3>Về Meowii Home</h3>
    <p> <a href="home.php">Trang chủ</a> / Thông tin </p>
 </div>
 
@@ -40,9 +40,8 @@
       </div>
 
       <div class="content">
-         <h3>Tại sao lại có Comic.</h3>
-         <p>Từ những bạn trẻ đam mê đọc những quyển truyện trinh thám và tiểu thuyết, chúng mình đã xây dựng nên website này để giúp mọi người có thể dễ dàng tìm kiếm và mua được những quyển truyện yêu thích của mình.</p>
-         <p>Qua một thời gian phát triển, Comic mong muốn mang đến những quyển truyện hay, sâu sắc và hấp dẫn đến tay các bạn đọc.</p>
+         <h3>Tarot là gì?</h3>
+         <p>Tarot là một hệ thống bói toán sử dụng một tập hợp các lá bài hay còn gọi là tụ bài để có được cái nhìn đa chiều nhằm kiểm soát tốt hơn các vấn đề liên quan đến các mối quan hệ, công việc, sức khỏe và nắm bắt những cơ hội thay đổi cuộc sống.</p>
          <a href="contact.php" class="btn">Liên hệ</a>
       </div>
 
@@ -140,19 +139,17 @@
 
 <section class="authors">
 
-   <h1 class="title">Thành viên của Comic</h1>
+   <h1 class="title">Thành viên của Meowii Home</h1>
 
    <div class="box-container">
 
       <div class="box">
-         <img src="images/anhkien.jpg" alt="">
+         <img src="images/anhthu.jpg" alt="">
          <div class="share">
-            <a href="#" class="fab fa-facebook-f"></a>
-            <a href="#" class="fab fa-twitter"></a>
-            <a href="#" class="fab fa-instagram"></a>
-            <a href="#" class="fab fa-linkedin"></a>
+            <a href="https://www.facebook.com/royalminhthu.411.20" class="fab fa-facebook-f" target="_blank"></a>
+            <a href="https://instagram.com/meowhunh411.2000?igshid=OGQ5ZDc2ODk2ZA==" class="fab fa-instagram" target="_blank"></a>
          </div>
-         <h3>Bùi Trung Kiên</h3>
+         <h3>Huỳnh Minh Thư</h3>
       </div>
 
       <!-- <div class="box">

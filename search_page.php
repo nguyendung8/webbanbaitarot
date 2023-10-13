@@ -18,7 +18,7 @@
       $product_quantity = $_POST['product_quantity'];
 
       if($product_quantity==0){
-         $message[] = 'Truyện đã hết hàng!';
+         $message[] = 'Bộ bài đã hết hàng!';
       }
       else{
          $check_cart_numbers = mysqli_query($conn, "SELECT * FROM `cart` WHERE name = '$product_name' AND user_id = '$user_id'") or die('query failed');
@@ -66,7 +66,7 @@
 
 <section class="search-form">
    <form action="" method="post">
-      <input type="text" name="search" placeholder="Tìm truyện..." class="box">
+      <input type="text" name="search" placeholder="Tìm bộ bài..." class="box">
       <input type="submit" name="submit" value="Tìm kiếm" class="btn">
    </form>
 </section>
@@ -83,12 +83,11 @@
       ?>
                   <form action="" method="post" class="box">
                      <img class="image" src="uploaded_img/<?php echo $fetch_products['image']; ?>" alt="">
-                     <div class="name"><?php echo $fetch_products['name']; ?> (<?php echo $fetch_products['category']; ?>)</div>
+                     <div class="name"><?php echo $fetch_products['name']; ?></div>
                      <div class="name"><?php echo $fetch_products['describes']; ?></div>
                      <div class="price"><?php echo $fetch_products['newprice']; ?>/<span style="text-decoration-line:line-through"><?php echo $fetch_products['price']; ?></span> VND (<?php echo $fetch_products['discount']; ?>% SL: <?php echo $fetch_products['quantity']; ?>)</div>
                      <input type="number" min="<?=($fetch_products['quantity']>0) ? 1:0 ?>" max="<?php echo $fetch_products['quantity']; ?>" name="product_quantity" value="<?=($fetch_products['quantity']>0) ? 1:0 ?>" class="qty">
                      <input type="hidden" name="product_name" value="<?php echo $fetch_products['name']; ?>">
-                     <input type="hidden" name="product_category" value="<?php echo $fetch_products['category']; ?>">
                      <input type="hidden" name="product_price" value="<?php echo $fetch_products['newprice']; ?>">
                      <input type="hidden" name="product_image" value="<?php echo $fetch_products['image']; ?>">
                      <input type="submit" value="Thêm vào giỏ hàng" name="add_to_cart" class="btn">

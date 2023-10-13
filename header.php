@@ -16,10 +16,8 @@
    <div class="header-1">
       <div class="flex">
          <div class="share">
-            <a href="#" class="fab fa-facebook-f"></a>
-            <a href="#" class="fab fa-twitter"></a>
-            <a href="#" class="fab fa-instagram"></a>
-            <a href="#" class="fab fa-linkedin"></a>
+            <a href="https://www.facebook.com/royalminhthu.411.20" class="fab fa-facebook-f" target="_blank"></a>
+            <a href=" https://instagram.com/meowhunh411.2000?igshid=OGQ5ZDc2ODk2ZA==" class="fab fa-instagram" target="_blank"></a>
          </div>
          <p><a href="login.php">Đăng nhập mới</a> | <a href="register.php">Đăng ký</a> </p>
       </div>
@@ -27,7 +25,7 @@
 
    <div class="header-2">
       <div class="flex">
-         <a href="home.php" class="logo">Comic</a>
+         <a href="home.php" class="logo">Meowii Home</a>
 
          <nav class="navbar">
             <a href="home.php">Trang chủ</a>

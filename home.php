@@ -18,7 +18,7 @@
       $product_quantity = $_POST['product_quantity'];
 
       if($product_quantity==0){
-         $message[] = 'Truyện đã hết hàng!';
+         $message[] = 'Bộ bài đã hết hàng!';
       }
       else{
          $check_cart_numbers = mysqli_query($conn, "SELECT * FROM `cart` WHERE name = '$product_name' AND user_id = '$user_id'") or die('query failed');
@@ -32,10 +32,10 @@
                $num=$fetch_quantity['quantity'];
             }
             mysqli_query($conn, "UPDATE `cart` SET quantity='$num' WHERE name = '$product_name' AND user_id = '$user_id'");
-            $message[] = 'Truyện đã có trong giỏ hàng và được thêm số lượng!';
+            $message[] = 'Bộ bài đã có trong giỏ hàng và được thêm số lượng!';
          }else{
             mysqli_query($conn, "INSERT INTO `cart`(user_id, name, price, quantity, image) VALUES('$user_id', '$product_name', '$product_price', '$product_quantity', '$product_image')") or die('query failed');
-            $message[] = 'Truyện đã được thêm vào giỏ hàng!';
+            $message[] = 'Bộ bài đã được thêm vào giỏ hàng!';
          }
       }
    }
@@ -61,8 +61,8 @@
 <section class="home">
 
    <div class="content">
-      <h3>Mỗi ngày một quyển truyện.</h3>
-      <p>Những quyển truyện đều mang trong mình những bài học ý nghĩa, những trải nghiệm đáng giá.</p>
+      <h3>Một lá bài, một câu chuyện.</h3>
+      <p>Mỗi câu chuyện diễn ra quanh ta luôn mang lại những bài học đắt giá.</p>
       <a href="about.php" class="white-btn">Khám phá thêm</a>
    </div>
 
@@ -70,7 +70,7 @@
 
 <section class="products">
 
-   <h1 class="title">Truyện mới nhất</h1>
+   <h1 class="title">Bộ bài mới nhất</h1>
 
    <div class="box-container">
 
@@ -81,12 +81,11 @@
       ?>
                <form action="" method="post" class="box">
                   <img class="image" src="uploaded_img/<?php echo $fetch_products['image']; ?>" alt="">
-                  <div class="name"><?php echo $fetch_products['name']; ?> (<?php echo $fetch_products['category']; ?>)</div>
+                  <div class="name"><?php echo $fetch_products['name']; ?></div>
                   <div class="name"><?php echo $fetch_products['describes']; ?></div>
                   <div class="price"><?php echo $fetch_products['newprice']; ?>/<span style="text-decoration-line:line-through"><?php echo $fetch_products['price']; ?></span> VND (<?php echo $fetch_products['discount']; ?>% SL: <?php echo $fetch_products['quantity']; ?>)</div>
                   <input type="number" min="<?=($fetch_products['quantity']>0) ? 1:0 ?>" max="<?php echo $fetch_products['quantity']; ?>" name="product_quantity" value="<?=($fetch_products['quantity']>0) ? 1:0 ?>" class="qty">
                   <input type="hidden" name="product_name" value="<?php echo $fetch_products['name']; ?>">
-                  <input type="hidden" name="product_category" value="<?php echo $fetch_products['category']; ?>">
                   <input type="hidden" name="product_price" value="<?php echo $fetch_products['newprice']; ?>">
                   <input type="hidden" name="product_image" value="<?php echo $fetch_products['image']; ?>">
                   <input type="submit" value="Thêm vào giỏ hàng" name="add_to_cart" class="btn">
@@ -94,7 +93,7 @@
       <?php
             }
          }else{
-            echo '<p class="empty">Chưa có truyện được bán!</p>';
+            echo '<p class="empty">Chưa có bộ bài được bán!</p>';
          }
       ?>
    </div>
@@ -114,8 +113,8 @@
       </div>
 
       <div class="content">
-         <h3>Comic</h3>
-         <p>Từ hội những bạn trẻ yêu thích đọc truyện, chúng mình muốn cùng chia sẻ những đam mê và sở thích tới mọi người.</p>
+         <h3>Meowii Home</h3>
+         <p>Từ cá nhân lên chung một cộng đồng Tarot lớn để cùng học hỏi và phát triển.</p>
       </div>
 
    </div>
@@ -126,7 +125,7 @@
 
    <div class="content">
       <h3>Bạn có thắc mắc?</h3>
-      <p>Hãy để lại những điều bạn còn thắc mắc, băn khoăn hay muốn chia sẻ thêm về những quyển truyện cho chúng mình tại đây để chúng mình có thể giải đáp giúp bạn</p>
+      <p>Đừng ngần ngại với những câu hỏi chưa thể hiểu rõ về Tarot - Huyền Học, hãy liên hệ với chúng mình về thắc mắc của bạn.</p>
       <a href="contact.php" class="white-btn">Liên hệ</a>
    </div>
 
