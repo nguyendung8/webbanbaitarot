@@ -94,7 +94,7 @@
             while($fetch_products = mysqli_fetch_assoc($select_products)){
                   ?>
                      <form action="" method="post" class="box">
-                        <img class="image" src="uploaded_img/<?php echo $fetch_products['image']; ?>" alt="">
+                        <img  width="220px" class="image" src="uploaded_img/<?php echo $fetch_products['image']; ?>" alt="">
                         <div class="name"><?php echo $fetch_products['name']; ?></div>
                         <div class="sub-name">Tác giả: <?php echo $fetch_products['author']; ?></div>
                            <div class="sub-name">Mô tả: <?php echo $fetch_products['describes']; ?></div>

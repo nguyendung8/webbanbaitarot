@@ -80,7 +80,7 @@
             while($fetch_products = mysqli_fetch_assoc($select_products)){
       ?>
                <form action="" method="post" class="box">
-                  <img class="image" src="uploaded_img/<?php echo $fetch_products['image']; ?>" alt="">
+                  <img width="220px" class="image" src="uploaded_img/<?php echo $fetch_products['image']; ?>" alt="">
                   <div class="name"><?php echo $fetch_products['name']; ?></div>
                   <div class="name"><?php echo $fetch_products['describes']; ?></div>
                   <div class="price"><?php echo $fetch_products['newprice']; ?>/<span style="text-decoration-line:line-through"><?php echo $fetch_products['price']; ?></span> VND (<?php echo $fetch_products['discount']; ?>% SL: <?php echo $fetch_products['quantity']; ?>)</div>
